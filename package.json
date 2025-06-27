@@ -1,20 +1,42 @@
 {
-  "name": "my-turborepo",
+  "name": "wework-ui",
   "private": true,
+  "version": "1.0.0",
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types"
+    "clean": "rimraf .vscode .turbo node_modules **/**/node_modules",
+    "serve": "turbo run serve --parallel --no-cache",
+    "serve-alone:vite": "turbo run serve-alone --filter=apps-vite --parallel --no-cache ",
+    "build-development-alone": "node scripts/build-alone.js --mode development",
+    "build-release-alone": "node scripts/build-alone.js --mode release",
+    "preinstall": "node scripts/preinstall.js",
+    "lint": "turbo run lint --no-cache",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "minimist": "^1.2.8",
     "prettier": "^3.5.3",
-    "turbo": "^2.5.4",
-    "typescript": "5.8.2"
+    "rimraf": "^4.4.1",
+    "shelljs": "^0.8.5",
+    "turbo": "^2.5.4"
   },
   "packageManager": "pnpm@9.0.0",
   "engines": {
     "node": ">=18"
+  },
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "@tailwindcss/vite": "^4.1.10",
+    "ant-design-vue": "4.x",
+    "pinia": "^3.0.3",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.10",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.1"
   }
 }

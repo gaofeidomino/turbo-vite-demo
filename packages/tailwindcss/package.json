@@ -1,0 +1,6 @@
+{
+  "name": "@gf/tailwindcss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind-config.css"
+}

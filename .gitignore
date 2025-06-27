@@ -36,3 +36,9 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
+
+# 忽略 .npmrc (和研发云冲突，采用脚本赋值)
+.npmrc
+
+# vscode 目录
+.vscode/

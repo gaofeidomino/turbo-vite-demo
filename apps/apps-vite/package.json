@@ -1,0 +1,27 @@
+{
+  "name": "apps-vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "serve": "vite",
+    "serve-alone": "vite",
+    "build": "vite build",
+    "build-only": "vite build",
+    "build-only-development": "vite build --mode development",
+    "build-only-development-alone": "vite build --mode development",
+    "build-only-release": "vite build --mode release",
+    "build-only-release-alone": "vite build --mode release",
+    "lint": "vite lint"
+  },
+  "dependencies": {
+    "@gf/tailwindcss": "workspace:*",
+    "@gf/ui": "workspace:*",
+    "@gf/utils": "workspace:*",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "vite": "^6.3.5"
+  }
+}
